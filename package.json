@@ -1,7 +1,11 @@
 {
-  "name": "",
+  "name": "astropampers",
   "type": "module",
   "version": "0.0.1",
+  "description": "AstroPampers starter Astro + Vercel Website template",
+  "keywords": [],
+  "author": "Hrihorii Ilin",
+  "license": "MIT",
   "scripts": {
     "editorconfig": "editorconfig-checker",
     "lint": "prettier --write  \"**/*.{js,jsx,ts,tsx,md,mdx,astro}\" && eslint --fix \"src/**/*.{js,ts,jsx,tsx,astro}\"",
