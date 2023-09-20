@@ -1,4 +1,5 @@
 ---
+import Mybio from "@components/Mybio.astro";
 
 ---
 
@@ -8,9 +9,12 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<h1>AstroPampers</h1>
+	</Mybio>
+		<dotlottie-player src="https://lottie.host/07a81e6e-c4c1-47f4-adef-d5fa55f4640b/55YCp07nr5.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
 	</body>
 </html>
