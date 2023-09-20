@@ -1,5 +1,5 @@
 import { defineConfig } from 'astro/config';
-import vercelServerless from '@astrojs/vercel/serverless';
+import vercelStatic from '@astrojs/vercel/static';
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 
@@ -7,8 +7,8 @@ import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
-  output: "server",
-  adapter: vercelServerless({
+  output: "static",
+  adapter: vercelStatic({
     imageService: true,
     webAnalytics: {
       enabled: true
