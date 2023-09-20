@@ -10,12 +10,6 @@ export default defineConfig({
   output: "static",
   adapter: vercelStatic({
     imageService: true,
-    webAnalytics: {
-      enabled: true
-    },
-    speedInsights: {
-      enabled: true
-    }
   }),
   integrations: [react(), tailwind({
     configFile: './tailwind.config.cjs'
