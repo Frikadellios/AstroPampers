@@ -1,0 +1,93 @@
+---
+import Container from "@components/Container.astro";
+import Link from "@ui/Link.astro";
+import Dropdown from "@navigation/Dropdown.astro";
+import Search from "@navigation/Search.astro";
+import DrawlerButton from "@navigation/DrawlerButton.astro";
+import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+
+const menuitems = [
+  {
+    title: "Features",
+    path: "#",
+    children: [
+      { title: "Action", path: "/" },
+      { title: "Another action", path: "#" },
+      { title: "Dropdown Submenu", path: "#" },
+      { title: "404 Page", path: "/404" },
+    ],
+  },
+  {
+    title: "Pricing",
+    path: "/pricing",
+    xmlns: "http://www.w3.org/2000/svg",
+  },
+  {
+    title: "About",
+    path: "/about",
+    xmlns: "http://www.w3.org/2000/svg",
+  },
+  {
+    title: "Blog",
+    path: "/blog",
+    xmlns: "http://www.w3.org/2000/svg",
+  },
+  {
+    title: "Contact",
+    path: "/contact",
+    xmlns: "http://www.w3.org/2000/svg",
+  },
+];
+---
+
+<Container>
+  <header class="flex flex-col lg:flex-row justify-between items-center my-5 bg-base-200 rounded-box">
+    <Astronav>
+      <div class="flex w-full lg:w-auto items-center justify-between1">
+        <a class="btn  normal-case text-xl">AstroPampmers</a>
+        <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
+          <ul class="flex flex-col lg:flex-row lg:gap-3">
+            {
+              menuitems.map((item, index) => (
+                <>
+                  {item.children && (
+                    <Dropdown
+                      title={item.title}
+                      children={item.children}
+                      lastItem={index === menuitems.length - 1}
+                    />
+                  )}
+                  </>
+            ))
+            }
+          </ul>
+      </div>
+      <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
+        <ul class="menu menu-vertical lg:menu-horizontal bg-base-200 rounded-box">
+          {
+            menuitems.map((item, index) => (
+              <>
+              {!item.children && (
+                  <li>
+                    <a
+                      href={item.path}
+                      class="flex lg:px-3 py-2 link hover:link-info"><svg xmlns={item.xmlns} class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
+                      {item.title}
+                    </a>
+                  </li>
+                )}
+              </>
+            ))
+          }
+        </ul>
+      </MenuItems>
+      
+  </Astronav>
+  <div>
+    <div class="hidden lg:flex items-center gap-4">
+      <Search/>
+      <DrawlerButton/>
+    </div>
+  </div>
+</header>
+</Container>

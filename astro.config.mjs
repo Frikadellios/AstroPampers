@@ -12,6 +12,6 @@ export default defineConfig({
     imageService: true,
   }),
   integrations: [react(), tailwind({
-    configFile: './tailwind.config.cjs'
+    applyBaseStyles: false,
   }), partytown()]
 });

@@ -23,6 +23,15 @@ dependencies:
   '@astrojs/vercel':
     specifier: ^5.0.1
     version: 5.0.1(astro@3.1.1)
+  '@fontsource-variable/inter':
+    specifier: ^5.0.8
+    version: 5.0.8
+  '@tailwindcss/aspect-ratio':
+    specifier: ^0.4.2
+    version: 0.4.2(tailwindcss@3.3.3)
+  '@tailwindcss/forms':
+    specifier: ^0.5.6
+    version: 0.5.6(tailwindcss@3.3.3)
   '@types/react':
     specifier: ^18.0.21
     version: 18.2.22
@@ -32,18 +41,18 @@ dependencies:
   astro:
     specifier: ^3.1.1
     version: 3.1.1
+  astro-navbar:
+    specifier: ^2.1.1
+    version: 2.1.1
+  astro-seo:
+    specifier: ^0.8.0
+    version: 0.8.0
   react:
     specifier: ^18.2.0
     version: 18.2.0
   react-dom:
     specifier: ^18.0.0
     version: 18.2.0(react@18.2.0)
-  tailwindcss:
-    specifier: ^3.0.24
-    version: 3.3.3
-  typescript:
-    specifier: ^5.2.2
-    version: 5.2.2
 
 devDependencies:
   '@tailwindcss/typography':
@@ -58,6 +67,9 @@ devDependencies:
   cssnano:
     specifier: ^6.0.1
     version: 6.0.1(postcss@8.4.30)
+  daisyui:
+    specifier: ^3.7.7
+    version: 3.7.7
   editorconfig-checker:
     specifier: ^5.1.1
     version: 5.1.1
@@ -70,6 +82,12 @@ devDependencies:
   eslint-plugin-jsx-a11y:
     specifier: ^6.7.1
     version: 6.7.1(eslint@8.49.0)
+  postcss:
+    specifier: ^8.4.30
+    version: 8.4.30
+  postcss-import:
+    specifier: ^15.1.0
+    version: 15.1.0(postcss@8.4.30)
   postcss-preset-env:
     specifier: ^9.1.4
     version: 9.1.4(postcss@8.4.30)
@@ -85,6 +103,12 @@ devDependencies:
   prettier-plugin-tailwindcss:
     specifier: ^0.5.4
     version: 0.5.4(prettier-plugin-astro@0.12.0)(prettier@3.0.3)
+  tailwindcss:
+    specifier: ^3.3.3
+    version: 3.3.3
+  typescript:
+    specifier: ^5.2.2
+    version: 5.2.2
 
 packages:
 
@@ -1351,6 +1375,10 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
+  /@fontsource-variable/inter@5.0.8:
+    resolution: {integrity: sha512-WkYfFNccmEIeL2fNg0mYeLWqOoB7xD8MFxFRc4IwbSP2o8ZaBt36v5aW4by4MyrgGRMNk7uNi5LbvYKq6clPjw==}
+    dev: false
+
   /@humanwhocodes/config-array@0.11.11:
     resolution: {integrity: sha512-N2brEuAadi0CcdeMXUkhbZB84eskAc8MEX1By6qEchoVywSgXPIjou4rYsl0V3Hj0ZnuGycGCjdNgockbzeWNA==}
     engines: {node: '>=10.10.0'}
@@ -1450,6 +1478,23 @@ packages:
     dependencies:
       estree-walker: 2.0.2
       picomatch: 2.3.1
+    dev: false
+
+  /@tailwindcss/aspect-ratio@0.4.2(tailwindcss@3.3.3):
+    resolution: {integrity: sha512-8QPrypskfBa7QIMuKHg2TA7BqES6vhBrDLOv8Unb6FcFyd3TjKbc6lcmb9UPQHxfl24sXoJ41ux/H7qQQvfaSQ==}
+    peerDependencies:
+      tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
+    dependencies:
+      tailwindcss: 3.3.3
+    dev: false
+
+  /@tailwindcss/forms@0.5.6(tailwindcss@3.3.3):
+    resolution: {integrity: sha512-Fw+2BJ0tmAwK/w01tEFL5TiaJBX1NLT1/YbWgvm7ws3Qcn11kiXxzNTEQDMs5V3mQemhB56l3u0i9dwdzSQldA==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1'
+    dependencies:
+      mini-svg-data-uri: 1.4.4
+      tailwindcss: 3.3.3
     dev: false
 
   /@tailwindcss/typography@0.5.10(tailwindcss@3.3.3):
@@ -1966,6 +2011,14 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /astro-navbar@2.1.1:
+    resolution: {integrity: sha512-wGIw3FkBbA9Q8AE1TzF7cCWUEqtR28bT/vyEOGHNgTGxa6vmwUlEnjBdtUoyyT3/Oc0bA6Y6rYC2ndtDU1Q/WQ==}
+    dev: false
+
+  /astro-seo@0.8.0:
+    resolution: {integrity: sha512-7gq6lhibCM8FuzZIJlbLLWP5EJ9KL2/4XqeFrAg9O6ZK2xMFxJ5ubKf+a0VJwwTu8W8Xr421CmpiXu6Hq7n/7Q==}
+    dev: false
 
   /astro@3.1.1:
     resolution: {integrity: sha512-KLtzCcLiQEsoWHJO0vQ5QZ/9/80P3cUuBeIkl87YezRkzs3Am0kuzfeGLumb6OOcrR2W0AZGlVlS0ub+q/yiaA==}
@@ -2485,6 +2538,13 @@ packages:
       nth-check: 2.1.1
     dev: true
 
+  /css-selector-tokenizer@0.8.0:
+    resolution: {integrity: sha512-Jd6Ig3/pe62/qe5SBPTN8h8LeUg/pT4lLgtavPf7updwwHpvFzxvOQBHYj2LZDMjUnBzgvIUSjRcf6oT5HzHFg==}
+    dependencies:
+      cssesc: 3.0.0
+      fastparse: 1.1.2
+    dev: true
+
   /css-tree@2.2.1:
     resolution: {integrity: sha512-OA0mILzGc1kCOCSJerOeqDxDQ4HOh+G8NbOJFOTgOCzpw7fCBubk0fEyxp8AgOL/jvLgYA/uV0cMbe43ElF1JA==}
     engines: {node: ^10 || ^12.20.0 || ^14.13.0 || >=15.0.0, npm: '>=7.0.0'}
@@ -2583,6 +2643,19 @@ packages:
   /csstype@3.1.2:
     resolution: {integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==}
     dev: false
+
+  /daisyui@3.7.7:
+    resolution: {integrity: sha512-2/nFdW/6R9MMnR8tTm07jPVyPaZwpUSkVsFAADb7Oq8N2Ynbls57laDdNqxTCUmn0QvcZi01TKl8zQbAwRfw1w==}
+    engines: {node: '>=16.9.0'}
+    dependencies:
+      colord: 2.9.3
+      css-selector-tokenizer: 0.8.0
+      postcss: 8.4.30
+      postcss-js: 4.0.1(postcss@8.4.30)
+      tailwindcss: 3.3.3
+    transitivePeerDependencies:
+      - ts-node
+    dev: true
 
   /damerau-levenshtein@1.0.8:
     resolution: {integrity: sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==}
@@ -3198,6 +3271,10 @@ packages:
 
   /fast-levenshtein@2.0.6:
     resolution: {integrity: sha512-DCXu6Ifhqcks7TZKY3Hxp3y6qphY5SJZmrWMDrKcERSOXWQdMhU9Ig/PYrzyw/ul9jOIyh0N4M0tbC5hodg8dw==}
+    dev: true
+
+  /fastparse@1.1.2:
+    resolution: {integrity: sha512-483XLLxTVIwWK3QTrMGRqUfUpoOs/0hbQrl2oz4J0pAcm3A3bu84wxTFqGqkJzewCLdME38xJLJAxBABfQT8sQ==}
     dev: true
 
   /fastq@1.15.0:
@@ -4502,6 +4579,11 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /mini-svg-data-uri@1.4.4:
+    resolution: {integrity: sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==}
+    hasBin: true
+    dev: false
 
   /minimatch@3.1.2:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}

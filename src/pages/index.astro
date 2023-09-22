@@ -1,20 +1,20 @@
 ---
-import Mybio from "@components/Mybio.astro";
+import Container from "@/components/Container.astro";
+import Card3 from "@/components/card/Card3.astro";
+import Hero1 from "@hero/Hero1.astro";
+import Hero5 from "@hero/Hero5.astro";
+import HeroLottie from "@hero/HeroLottie.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import StepsResponsive from "@ui/StepsResponsive.astro";
 
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>AstroPampers</h1>
-	</Mybio>
-		<dotlottie-player src="https://lottie.host/07a81e6e-c4c1-47f4-adef-d5fa55f4640b/55YCp07nr5.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
-	</body>
-</html>
+<BaseLayout title="Home">
+<Container>
+    <HeroLottie/>
+    <Card3/>
+    <StepsResponsive/>
+    <Hero5/>
+    <Hero1/>
+</Container>
+</BaseLayout>   
